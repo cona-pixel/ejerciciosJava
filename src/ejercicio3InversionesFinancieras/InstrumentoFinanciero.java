@@ -1,6 +1,6 @@
-package ejercicioInversionesFinancieras;
+package ejercicio3InversionesFinancieras;
 
-public  abstract class InstrumentoFinanciero {
+public abstract class InstrumentoFinanciero implements Liquidable{
     protected String codigo;
     protected String nombre;
     protected double montoInvertido;

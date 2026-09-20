@@ -1,6 +1,6 @@
-package ejercicioInversionesFinancieras;
+package ejercicio3InversionesFinancieras;
 
-public class FondoInversion extends InstrumentoFinanciero {
+public class FondoInversion extends InstrumentoFinanciero{
 
     private double variacionPorcentual;
     private double comisionAdministracion;
@@ -13,6 +13,17 @@ public class FondoInversion extends InstrumentoFinanciero {
 
     @Override
     public double calcularRentabilidad(){
-        double
+        return 0;
+
+    }
+
+    @Override
+    public String obtenerNivelRiesgo() {
+        return "";
+    }
+
+    @Override
+    public double liquidar() {
+        return 0;
     }
 }
