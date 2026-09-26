@@ -1,4 +1,4 @@
-package ejercicioInversionesFinancieras;
+package ejercicio3InversionesFinancieras;
 
 public class DepositoPlazo extends InstrumentoFinanciero {
 
@@ -21,17 +21,6 @@ public class DepositoPlazo extends InstrumentoFinanciero {
         return "Bajo";
     }
 
-    @Override
-    public void mostrarResumen(){
-        super.mostrarMenu();
-        System.out.println("Tipo: Depósito a Plazo Fijo");
-        System.out.println("plazoMeses = " + plazoMeses);
-        System.out.println("tasaInteres = " + tasaInteres);
-        System.out.println("Riesgo: " + obtenerNivelRiesgo());
-        System.out.println("Rentabilidad Estimada: $" + String.format("%,.0f", calcularRentabilidad()).replace(',','.'));
-    }
-
-
     public double getTasaInteres() {
         return tasaInteres;
     }
@@ -46,5 +35,11 @@ public class DepositoPlazo extends InstrumentoFinanciero {
 
     public void setPlazoMeses(int plazoMeses) {
         this.plazoMeses = plazoMeses;
+    }
+
+
+    @Override
+    public double liquidar() {
+        return 0;
     }
 }

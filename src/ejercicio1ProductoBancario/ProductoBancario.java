@@ -1,5 +1,4 @@
-package ejercicioProductoBancario;
-
+package ejercicio1ProductoBancario;
 
 public abstract class ProductoBancario {
 
@@ -14,10 +13,9 @@ public abstract class ProductoBancario {
         this.nombreTitular = nombreTitular;
         this.saldo = saldo;
 
-
     }
 
-        //aqui irian los metodos mostrar resumen
+        //aqui los metodos mostrar resumen
         public void mostrarResumen(){
             System.out.println("---RESUMEN DE CUENTA---");
             System.out.println("numeroProducto = " + numeroProducto);
@@ -25,7 +23,7 @@ public abstract class ProductoBancario {
             System.out.println("Saldo actual: $" + saldo);
 
         }
-        public void  depositar (double monto){
+        public  void  depositar (double monto){
             if (monto > 0){
                 this.saldo += monto;
                 System.out.println("Deposito exitoso de $" + monto);
@@ -33,7 +31,6 @@ public abstract class ProductoBancario {
                 System.out.println("El monto a depositar debe ser mayor a 0. ");
             }
         }
-
         //aqui no lleva ningun calculo porque la clase padre no puede llevar un calculo para las dos clases distintas
         public abstract boolean girar (double monto);
 
@@ -65,7 +62,6 @@ public abstract class ProductoBancario {
         public void restarSaldo(double montoAretirar) {
             this.saldo -= montoAretirar;
         }
-
 
     }
 
